@@ -1,0 +1,5 @@
+docker build -t pose_detection_image .
+
+docker run --gpus all -p 8888:8888 -v "%cd%":/pose_seizure_classifier -w /pose_seizure_classifier -it pose_detection_image   
+
+docker exec -it <container_name_or_id> /bin/bash
